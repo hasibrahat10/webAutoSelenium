@@ -37,7 +37,8 @@ public class HomeSteps extends BasePage {
 
     @Then("Enter Firstname as {string}")
     public void enterFirstnameAs(String firstName) {
-        System.out.println(firstName);
+        new HomePage().enterIframe();
+
         new HomePage().setFirstName(firstName);
     }
 
@@ -69,9 +70,39 @@ public class HomeSteps extends BasePage {
         new HomePage().setEmail(email);
     }
 
+    @Then("Select the Gender as {string}")
+    public void selectTheGenderAs(String gender) {
+
+        new HomePage().setGender(gender);
+
+    }
+
+
+    @Then("Select the Days of the week as {string}")
+    public void selectTheDaysOfTheWeekAs(String days) {
+        new HomePage().selectDayWeek(days);
+    }
+
+    @Then("Select best time to contact")
+    public void selectBestTimeToContact() {
+    }
+
+    @Then("Upload a file")
+    public void uploadAFile() {
+    }
+
 
     @And("click on submit button")
     public void clickOnSubmitButton() {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         new HomePage().clickSubmit();
+        new HomePage().exitIframe();
+        driver.quit();
     }
+
+
 }

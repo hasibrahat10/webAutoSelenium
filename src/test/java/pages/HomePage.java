@@ -21,6 +21,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//*[@id='wikipedia-search-result-link']/a")
     List<WebElement> srcResult;
 
+    //Name Input
     @FindBy(xpath = "//input[@id='RESULT_TextField-1']")
     WebElement firstName;
 
@@ -41,9 +42,24 @@ public class HomePage extends BasePage {
     @FindBy(id = "RESULT_TextField-6")
     WebElement email;
 
+    //Gender select Radio Button
+    @FindBy(xpath = "//label[contains(text(),'Male')] ")
+    WebElement gndMale;
+
+    @FindBy(xpath = "//label[contains(text(),'Female')] ")
+    WebElement gndFemale;
+
+//Days of the Week MultiSelect
+
+    @FindBy(xpath = "//*[@name='RESULT_CheckBox-8']/following-sibling::label")
+    List<WebElement> allDay;
+
+// Final Submit for the Form
+
     @FindBy(id = "FSsubmit")
     WebElement btnSubmit;
 
+    //Method Declare to the Elements
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -76,9 +92,17 @@ public class HomePage extends BasePage {
     public String searchResultDisplay() {
         String results = srcResult.get(0).getText();
         for (WebElement webElement : srcResult) {
-            System.out.println(webElement.getText());
+
         }
         return results;
+    }
+
+    public void enterIframe() {
+        driver.switchTo().frame("frame-one1434677811");
+    }
+
+    public void exitIframe() {
+        driver.switchTo().defaultContent();
     }
 
     public void setFirstName(String fname) {
@@ -115,6 +139,32 @@ public class HomePage extends BasePage {
         email.sendKeys(emailName);
     }
 
+    public void setGender(String gender) {
+
+        if (gender.equals("Male")) {
+            gndMale.click();
+        } else if (gender.equals("Female")) {
+            gndFemale.click();
+        } else {
+            gndMale.click(); //Default select Gender
+        }
+
+    }
+
+    public void selectDayWeek(String days) {
+        String[] dayArray = days.split(", ");
+        for (int i = 0; i < dayArray.length; i++) {
+            sleepFor(1);
+            for (WebElement day : allDay) {
+                if (dayArray[i].equals(day.getText()))
+                    if (!day.isSelected()) {
+                        day.click();
+                        sleepFor(1);
+                    }
+            }
+        }
+    }
+
 
     public void clickSubmit() {
         btnSubmit.click();
@@ -124,6 +174,5 @@ public class HomePage extends BasePage {
             e.printStackTrace();
         }
     }
-
 
 }
