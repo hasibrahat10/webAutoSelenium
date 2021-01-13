@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c0c4267b-2060-497d-9e07-2e04a91dcd01" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/features/Home.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/features/Home.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/HomeSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/HomeSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/pages/HomePage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/stepDefinitions/HomeSteps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/stepDefinitions/HomeSteps.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test-output/report.js" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/report.js" afterDir="false" />
@@ -179,22 +175,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1610522724197" />
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom" timestamp="1610536744729">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom" timestamp="1610542862187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="167" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610536744729" />
-    <state width="1323" height="167" key="GridCell.Tab.0.center" timestamp="1610536744729">
+    <state width="1323" height="256" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1610542862187" />
+    <state width="1323" height="256" key="GridCell.Tab.0.center" timestamp="1610542862187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="167" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610536744729" />
-    <state width="1323" height="167" key="GridCell.Tab.0.left" timestamp="1610536744729">
+    <state width="1323" height="256" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1610542862187" />
+    <state width="1323" height="256" key="GridCell.Tab.0.left" timestamp="1610542862186">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="167" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610536744729" />
-    <state width="1323" height="167" key="GridCell.Tab.0.right" timestamp="1610536744729">
+    <state width="1323" height="256" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1610542862186" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right" timestamp="1610542862187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="167" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610536744729" />
+    <state width="1323" height="256" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1610542862187" />
     <state x="151" y="0" key="SettingsEditor" timestamp="1610521267851">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

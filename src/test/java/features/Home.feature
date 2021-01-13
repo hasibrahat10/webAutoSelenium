@@ -20,7 +20,7 @@ Feature: Homepage
     Then Enter Email name as "<email>"
     Then Select the Gender as "<gender>"
     Then Select the Days of the week as "Sunday, Monday, Tuesday, Friday"
-    Then Select best time to contact
+    Then Select best time to contact as "<time>"
     Then Upload a file
     And click on submit button
     Examples:

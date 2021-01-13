@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 import stepDefinitions.BasePage;
 
 import java.util.List;
@@ -53,6 +54,17 @@ public class HomePage extends BasePage {
 
     @FindBy(xpath = "//*[@name='RESULT_CheckBox-8']/following-sibling::label")
     List<WebElement> allDay;
+
+    //Select the time
+
+    @FindBy(id = "RESULT_RadioButton-9")
+    WebElement time;
+
+    //file upload
+
+    @FindBy(id="RESULT_FileUpload-10")
+    WebElement fileUpload;
+
 
 // Final Submit for the Form
 
@@ -165,6 +177,17 @@ public class HomePage extends BasePage {
         }
     }
 
+    public void setMeetTime(String mtime) {
+        Select dropdown = new Select(time);
+
+        dropdown.selectByVisibleText("Afternoon");
+        sleepFor(2);
+
+    }
+
+    public void uploadFile(){
+        fileUpload.sendKeys("C:\\Users\\rootnext\\Downloads\\x.jpg");
+    }
 
     public void clickSubmit() {
         btnSubmit.click();

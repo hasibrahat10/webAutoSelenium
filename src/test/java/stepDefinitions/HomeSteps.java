@@ -83,12 +83,16 @@ public class HomeSteps extends BasePage {
         new HomePage().selectDayWeek(days);
     }
 
-    @Then("Select best time to contact")
-    public void selectBestTimeToContact() {
+
+    @Then("Select best time to contact as {string}")
+    public void selectBestTimeToContactAs(String time) {
+        new HomePage().setMeetTime(time);
+
     }
 
     @Then("Upload a file")
     public void uploadAFile() {
+        new HomePage().uploadFile();
     }
 
 
