@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -11,12 +10,6 @@ import java.util.logging.Logger;
 public class BasePage {
     public static WebDriver driver;
 
-    public static void scrollDown(int count) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        for (int i = 0; i < count; i++) {
-            js.executeScript("window.scrollBy(0,1000)");
-        }
-    }
 
     public void startDriver() {
         System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("user.dir") + "/drivers/chromedriver_win32/chromedriver.exe");

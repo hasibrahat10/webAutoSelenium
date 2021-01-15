@@ -109,4 +109,52 @@ public class HomeSteps extends BasePage {
     }
 
 
+    @Then("Click on the copy text button")
+    public void clickOnTheCopyTextButton() {
+        new HomePage().copyText();
+    }
+
+    @Then("Drag the item to drop")
+    public void dragTheItemToDrop() {
+        new HomePage().dragDrop();
+    }
+
+    @Then("Pick the date")
+    public void pickTheDate() {
+
+    }
+
+    @Then("click on advance button")
+    public void clickOnAdvanceButton() {
+        new HomePage().advDetails();
+    }
+
+    @Then("click on back to safe button")
+    public void clickOnBackToSafeButton() {
+        new HomePage().proceedToLogin();
+
+    }
+
+    @Then("Enter user details")
+    public void enterUserDetails() {
+        new HomePage().userInfo();
+
+    }
+
+    @And("Click on login")
+    public void clickOnLogin() {
+        new HomePage().clickLogin();
+    }
+
+    @Then("Click on Skip")
+    public void clickOnSkip() {
+        new HomePage().clickSkip();
+    }
+
+    @Then("Title should be {string}")
+    public void titleShouldBe(String actualText) {
+        Assert.assertEquals(actualText, new HomePage().dashboardTitle());
+        driver.quit();
+
+    }
 }

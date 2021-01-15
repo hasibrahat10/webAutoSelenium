@@ -27,4 +27,21 @@ Feature: Homepage
       | firstName | lastName | phone     | country    | city  | email             |
       | Hasib     | Rahat    | 019892342 | Bangladesh | Dhaka | hhrahat@gmail.com |
 
+  @test-04
+  Scenario: Login thisheart Dashboard
+
+#    Then Click on the copy text button
+#    Then Drag the item to drop
+#    Then Pick the date
+
+    Then click on advance button
+    Then click on back to safe button
+    Then Enter user details
+    And Click on login
+    Then Click on Skip
+    Then Text displayed with "ThisHeart- Dashboard"
+
+
+
+
 

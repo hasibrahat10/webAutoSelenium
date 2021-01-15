@@ -9,7 +9,8 @@ public class Hooks extends BasePage {
         startDriver();
         driver.manage().window().maximize();
 //        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.get("http://testautomationpractice.blogspot.com/");
+//        driver.get("http://testautomationpractice.blogspot.com/");
+        driver.get(" https://thisheart.co/login");
     }
 
     @After

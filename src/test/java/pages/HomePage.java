@@ -1,6 +1,7 @@
 package pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -62,7 +63,7 @@ public class HomePage extends BasePage {
 
     //file upload
 
-    @FindBy(id="RESULT_FileUpload-10")
+    @FindBy(id = "RESULT_FileUpload-10")
     WebElement fileUpload;
 
 
@@ -71,7 +72,41 @@ public class HomePage extends BasePage {
     @FindBy(id = "FSsubmit")
     WebElement btnSubmit;
 
+    @FindBy(xpath = "//button[contains(text(),'Copy Text')]")
+    WebElement copyBtn;
+
+    @FindBy(id = "draggable")
+    WebElement drag;
+
+    @FindBy(id = "droppable")
+    WebElement drop;
+
+    @FindBy(id = "datepicker")
+    WebElement datePick;
     //Method Declare to the Elements
+
+
+    //Thisheart
+    @FindBy(id = "details-button")
+    WebElement btnAdv;
+
+    @FindBy(id = "proceed-link")
+    WebElement btnProceed;
+
+    //Login with valid credentials
+    @FindBy(id = "username")
+    WebElement emailId;
+    @FindBy(id = "password")
+    WebElement password;
+    @FindBy(xpath = "//button[contains(text(),'Log in')]")
+    WebElement btnLogin;
+
+    @FindBy(xpath = "//button[contains(text(),'Skip')]")
+    WebElement btnSkip;
+
+    @FindBy(xpath = "//title[contains(text(),'ThisHeart- Dashboard')]")
+    WebElement expectedTitle;
+
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -185,9 +220,10 @@ public class HomePage extends BasePage {
 
     }
 
-    public void uploadFile(){
+    public void uploadFile() {
         fileUpload.sendKeys("C:\\Users\\rootnext\\Downloads\\x.jpg");
     }
+
 
     public void clickSubmit() {
         btnSubmit.click();
@@ -196,6 +232,50 @@ public class HomePage extends BasePage {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public void copyText() {
+        sleepFor(3);
+        Actions textCopy = new Actions(driver);
+        textCopy.doubleClick(copyBtn).build().perform();
+    }
+
+    public void dragDrop() {
+        Actions DragDrop = new Actions(driver);
+        DragDrop.dragAndDrop(drag, drop).build().perform();
+    }
+
+    public void advDetails() {
+        sleepFor(2);
+        btnAdv.click();
+
+    }
+
+    public void proceedToLogin() {
+        sleepFor(3);
+        btnProceed.click();
+    }
+
+    public void userInfo() {
+        emailId.clear();
+        emailId.sendKeys("demot@yopmail.com");
+        password.clear();
+        password.sendKeys("hasib12345;;");
+    }
+
+    public void clickLogin() {
+        btnLogin.click();
+        sleepFor(3);
+
+    }
+
+    public void clickSkip() {
+        btnSkip.click();
+        sleepFor(1);
+    }
+
+    public String dashboardTitle() {
+        return expectedTitle.getText();
     }
 
 }
